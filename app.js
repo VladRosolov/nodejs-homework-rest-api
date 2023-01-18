@@ -3,10 +3,12 @@ const logger = require("morgan");
 const cors = require("cors");
 const moment = require("moment");
 const fs = require("fs/promises");
+
 require("dotenv").config();
 
 const authRouter = require("./routes/api/auth");
 const contactsRouter = require("./routes/api/contacts");
+
 const app = express();
 
 const formatsLogger = app.get("env") === "development" ? "dev" : "short";
